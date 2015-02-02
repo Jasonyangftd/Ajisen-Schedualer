@@ -1,0 +1,42 @@
+<div id='container' ng-controller='boaController' ng-app="boaUp">
+
+  <script src='../../../../bower_components/angular/angular.min.js'></script>
+  <script src='../../../../bower_components/jQuery/dist/jquery.min.js'></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+
+  <script src="../../../employees.js"></script>
+  <script src="boa.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Your html here -->
+  <h1>Employees</h1>
+  <a ng-href="../../employee.html"><button>Back to Employee Page</button></a>
+  <table>
+    <tr>
+      <th colspan="8" ng-click="boaUpdate()">Boa<button>Update</button></th>
+    </tr>
+    <tr>
+      <th ng-repeat="head in heads">{{head}}</th>
+    </tr>
+    <tr>
+      <th>Lunch</th>
+      <td><select id='shiftLMON'><option>false<option><option>true</option></select></td>
+      <td><select id='shiftLTUE'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftLWED'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftLTHU'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftLFRI'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftLSAT'><option>false</option><option>true</option></select></td>
+      <td rowspan="2"><select id='shiftSUN'><option>false</option><option>true</option></select></td>
+    </tr> 
+    <tr>
+      <th>Dinner</th>
+      <td><select id='shiftDMON'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftDTUE'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftDWED'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftDTHU'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftDFRI'><option>false</option><option>true</option></select></td>
+      <td><select id='shiftDSAT'><option>false</option><option>true</option></select></td>
+    </tr>
+  </table>     
+</div>

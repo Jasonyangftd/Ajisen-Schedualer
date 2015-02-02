@@ -1,0 +1,58 @@
+<div id='container' ng-controller='EmployeeController' ng-app="employee">
+  <script src='../../bower_components/angular/angular.min.js'></script>
+  <script src='../../bower_components/jQuery/dist/jquery.min.js'></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+  
+  <script src="../employees.js"></script>
+
+  <script src="employee.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Your html here -->
+  <h1>Employees Schedule Sheet</h1>
+  <a ng-href="../../index.html"><button>Back to Main Page</button></a>
+  <ul>
+    <li ng-repeat="employee in employees">
+      <div>
+        <table>
+          <tr>
+            <th colspan="8">{{employee.name}}</th>
+          </tr>
+          <tr>
+            <th><a ng-href="update/{{employee.name}}/{{employee.name}}.html"><button>Update</button></a></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+          <tr>
+            <th>Lunch</th>
+            <td>{{employee.mondayLunch}}</td>
+            <td>{{employee.tuesdayLunch}}</td>
+            <td>{{employee.wendnesdayLunch}}</td>
+            <td>{{employee.thursdayLunch}}</td>
+            <td>{{employee.fridayLunch}}</td>
+            <td>{{employee.saturdayLunch}}</td>
+            <td rowspan="2">{{employee.sunday}}</td>
+          </tr> 
+          <tr>
+            <th>Dinner</th>
+            <td>{{employee.mondayDinner}}</td>
+            <td>{{employee.tuesdayDinner}}</td>
+            <td>{{employee.wendnesdayDinner}}</td>
+            <td>{{employee.thursdayDinner}}</td>
+            <td>{{employee.fridayDinner}}</td>
+            <td>{{employee.saturdayDinner}}</td>
+          </tr>
+          <tr>
+            <th colspan = "8"></th>
+          </tr>
+        </table>
+      </div>
+    </li>
+  </ul>
+
+</div>
